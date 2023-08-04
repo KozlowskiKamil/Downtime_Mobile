@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "740005345403",
+    "project_id": "notyficationdt",
+    "storage_bucket": "notyficationdt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740005345403:android:eeda9f7065d28984574ade",
+        "android_client_info": {
+          "package_name": "com.downtime.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740005345403-tvpp58nh3c2ecfo5l6892nggsd36hst9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.downtime.mobile",
+            "certificate_hash": "99b314f31f1622214c8271368b7868b1fad6a052"
+          }
+        },
+        {
+          "client_id": "740005345403-mlapd72avf26bil4kkouss583sciherb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmSJXDzHDZckDhN95FEo5f36R97pieghk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740005345403-mlapd72avf26bil4kkouss583sciherb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
