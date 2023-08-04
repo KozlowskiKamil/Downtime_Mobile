@@ -14,8 +14,8 @@ public class BreakdownHolder extends RecyclerView.ViewHolder {
 
     public BreakdownHolder(@NonNull View itemView) {
         super(itemView);
-        name = itemView.findViewById(R.id.employeeListItem_name);
-        location = itemView.findViewById(R.id.employeeListItem_location);
-        branch = itemView.findViewById(R.id.employeeListItem_branch);
+        name = itemView.findViewById(R.id.failureListItem_name);
+        location = itemView.findViewById(R.id.failureListItem_location);
+        branch = itemView.findViewById(R.id.failureListItem_branch);
     }
 }

@@ -24,7 +24,7 @@ public class BreakdownAdapter extends RecyclerView.Adapter<BreakdownHolder> {
     @Override
     public BreakdownHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_employee_item, parent, false);
+                .inflate(R.layout.list_failure_item, parent, false);
         return new BreakdownHolder(view);
     }
 

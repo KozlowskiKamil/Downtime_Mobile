@@ -12,7 +12,7 @@ import retrofit2.http.POST;
 public interface BreakdownApi {
 
     @GET("/findall")
-    Call<List<Breakedown>> getAllEmployees();
+    Call<List<Breakedown>> getAllfailures();
 
     @POST("/breakdown")
     Call<Breakedown> save(@Body Breakedown breakedown);

@@ -3,5 +3,5 @@
   <string name="form_name">Nazwa błędu</string>
   <string name="form_branch">Nazwa PC</string>
   <string name="form_location">OPIS</string>
-  <string name="button_save_employee">ZAPISZ AWARIE</string>
+  <string name="button_save_failure">ZAPISZ AWARIE</string>
 </resources>
