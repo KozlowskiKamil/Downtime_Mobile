@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient;
+package com.downtime.mobile;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.genuinecoder.springclient.adapter.BreakdownAdapter;
-import com.genuinecoder.springclient.model.Breakedown;
-import com.genuinecoder.springclient.reotrfit.BreakdownApi;
-import com.genuinecoder.springclient.reotrfit.RetrofitService;
+import com.downtime.mobile.adapter.BreakdownAdapter;
+import com.downtime.mobile.model.Breakedown;
+import com.downtime.mobile.reotrfit.BreakdownApi;
+import com.downtime.mobile.reotrfit.RetrofitService;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -27,22 +27,22 @@ public class BreakdownActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_employee_list);
+        setContentView(R.layout.activity_failure_list);
 
-        recyclerView = findViewById(R.id.employeeList_recyclerView);
+        recyclerView = findViewById(R.id.failureList_recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FloatingActionButton floatingActionButton = findViewById(R.id.employeeList_fab);
+        FloatingActionButton floatingActionButton = findViewById(R.id.failureList_fab);
         floatingActionButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, BreakdownForm.class);
             startActivity(intent);
         });
     }
 
-    private void loadEmployees() {
+    private void loadfailures() {
         RetrofitService retrofitService = new RetrofitService();
         BreakdownApi breakdownApi = retrofitService.getRetrofit().create(BreakdownApi.class);
-        breakdownApi.getAllEmployees()
+        breakdownApi.getAllfailures()
                 .enqueue(new Callback<List<Breakedown>>() {
                     @Override
                     public void onResponse(Call<List<Breakedown>> call, Response<List<Breakedown>> response) {
@@ -64,6 +64,6 @@ public class BreakdownActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        loadEmployees();
+        loadfailures();
     }
 }

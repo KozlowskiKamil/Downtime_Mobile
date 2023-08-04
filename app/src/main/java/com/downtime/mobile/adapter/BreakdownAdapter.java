@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient.adapter;
+package com.downtime.mobile.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.genuinecoder.springclient.R;
-import com.genuinecoder.springclient.model.Breakedown;
+import com.downtime.mobile.R;
+import com.downtime.mobile.model.Breakedown;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class BreakdownAdapter extends RecyclerView.Adapter<BreakdownHolder> {
     @Override
     public BreakdownHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_employee_item, parent, false);
+                .inflate(R.layout.list_failure_item, parent, false);
         return new BreakdownHolder(view);
     }
 

@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient.model;
+package com.downtime.mobile.model;
 
 public class Breakedown {
 

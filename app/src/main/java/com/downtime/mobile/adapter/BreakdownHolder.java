@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient.adapter;
+package com.downtime.mobile.adapter;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.genuinecoder.springclient.R;
+import com.downtime.mobile.R;
 
 public class BreakdownHolder extends RecyclerView.ViewHolder {
 
@@ -14,8 +14,8 @@ public class BreakdownHolder extends RecyclerView.ViewHolder {
 
     public BreakdownHolder(@NonNull View itemView) {
         super(itemView);
-        name = itemView.findViewById(R.id.employeeListItem_name);
-        location = itemView.findViewById(R.id.employeeListItem_location);
-        branch = itemView.findViewById(R.id.employeeListItem_branch);
+        name = itemView.findViewById(R.id.failureListItem_name);
+        location = itemView.findViewById(R.id.failureListItem_location);
+        branch = itemView.findViewById(R.id.failureListItem_branch);
     }
 }

@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient;
+package com.downtime.mobile;
 
 import org.junit.Test;
 
