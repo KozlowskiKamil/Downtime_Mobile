@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringClient.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SpringClient.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SpringClient.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SpringClient.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SpringClient.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SpringClient.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SpringClient.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SpringClient.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SpringClient.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MobileDT.iml" filepath="$PROJECT_DIR$/.idea/modules/MobileDT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MobileDT.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MobileDT.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MobileDT.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MobileDT.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MobileDT.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MobileDT.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MobileDT.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MobileDT.app.unitTest.iml" />
     </modules>
   </component>
 </project>
