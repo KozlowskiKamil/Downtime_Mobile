@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.genuinecoder.springclient">
+    package="com.downtime.mobile">
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,7 @@
         android:theme="@style/Theme.SpringClient"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".BreakdownActivity"
+            android:name="com.downtime.mobile.BreakdownActivity"
             android:exported="true"
             android:label="Employee list">
             <intent-filter>
@@ -20,10 +20,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BreakdownForm"
+            android:name="com.downtime.mobile.BreakdownForm"
             android:exported="true"
             android:label="Create new breakedown"
-            android:parentActivityName=".BreakdownActivity"></activity>
+            android:parentActivityName="com.downtime.mobile.BreakdownActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

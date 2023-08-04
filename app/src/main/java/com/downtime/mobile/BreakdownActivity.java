@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient;
+package com.downtime.mobile;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.genuinecoder.springclient.adapter.BreakdownAdapter;
-import com.genuinecoder.springclient.model.Breakedown;
-import com.genuinecoder.springclient.reotrfit.BreakdownApi;
-import com.genuinecoder.springclient.reotrfit.RetrofitService;
+import com.downtime.mobile.adapter.BreakdownAdapter;
+import com.downtime.mobile.model.Breakedown;
+import com.downtime.mobile.reotrfit.BreakdownApi;
+import com.downtime.mobile.reotrfit.RetrofitService;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;

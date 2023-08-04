@@ -1,13 +1,13 @@
-package com.genuinecoder.springclient;
+package com.downtime.mobile;
 
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.genuinecoder.springclient.model.Breakedown;
-import com.genuinecoder.springclient.reotrfit.BreakdownApi;
-import com.genuinecoder.springclient.reotrfit.RetrofitService;
+import com.downtime.mobile.model.Breakedown;
+import com.downtime.mobile.reotrfit.BreakdownApi;
+import com.downtime.mobile.reotrfit.RetrofitService;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 

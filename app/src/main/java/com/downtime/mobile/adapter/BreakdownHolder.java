@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient.adapter;
+package com.downtime.mobile.adapter;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.genuinecoder.springclient.R;
+import com.downtime.mobile.R;
 
 public class BreakdownHolder extends RecyclerView.ViewHolder {
 

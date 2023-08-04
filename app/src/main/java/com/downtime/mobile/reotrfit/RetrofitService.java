@@ -1,4 +1,4 @@
-package com.genuinecoder.springclient.reotrfit;
+package com.downtime.mobile.reotrfit;
 
 import com.google.gson.Gson;
 
