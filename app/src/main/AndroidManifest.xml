@@ -23,7 +23,10 @@
         </activity>
         <activity
             android:name=".Notyfication"
-            android:exported="true">
+            android:exported="true"
+            android:label="Token"
+            android:parentActivityName=".NavbarActivity">
+
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
@@ -43,7 +46,8 @@
         <activity
             android:name=".BreakdownActivity"
             android:exported="true"
-            android:label="Lista awarii">
+            android:label="Lista awarii"
+            android:parentActivityName=".NavbarActivity">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->

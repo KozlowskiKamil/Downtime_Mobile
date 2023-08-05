@@ -33,15 +33,13 @@ public class NavbarActivity extends AppCompatActivity {
                     startActivity(intent2);
                     break;
                 case R.id.close:
-                    Intent intent3 = new Intent(NavbarActivity.this, Notyfication.class);
-                    startActivity(intent3);
+                    replacefragment(new FailureFragment());
                     break;
-                case R.id.etToken:
+                case R.id.token:
                     Intent intent4 = new Intent(NavbarActivity.this, Notyfication.class);
                     startActivity(intent4);
                     break;
             }
-
 
             return true;
         });
@@ -54,6 +52,5 @@ public class NavbarActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
     }
-
 
 }
