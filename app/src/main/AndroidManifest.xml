@@ -14,31 +14,44 @@
         android:theme="@style/MobileDt"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Notyfication"
+            android:name=".NavbarActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+        <activity
+            android:name=".Notyfication"
+            android:exported="true"
+            android:label="Token"
+            android:parentActivityName=".NavbarActivity">
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
         <service
-            android:name="MyFirebaseMessagingService"
-            android:exported="false"
-            android:directBootAware="true">
+            android:name=".MyFirebaseMessagingService"
+            android:directBootAware="true"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <activity
             android:name=".BreakdownActivity"
             android:exported="true"
-            android:label="Lista awarii">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="Lista awarii"
+            android:parentActivityName=".NavbarActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".BreakdownForm"
