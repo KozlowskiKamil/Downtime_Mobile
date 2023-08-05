@@ -1,5 +1,6 @@
 package com.downtime.mobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,19 +25,20 @@ public class NavbarActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.failure:
-                    replacefragment(new FailureFragment());
+                    Intent intent = new Intent(NavbarActivity.this, BreakdownActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.done:
-                    replacefragment(new DoneFragment());
-
+                    Intent intent2 = new Intent(NavbarActivity.this, BreakdownForm.class);
+                    startActivity(intent2);
                     break;
                 case R.id.close:
-                    replacefragment(new CloseFragment());
-
+                    Intent intent3 = new Intent(NavbarActivity.this, Notyfication.class);
+                    startActivity(intent3);
                     break;
                 case R.id.etToken:
-                    replacefragment(new TokenFragment());
-
+                    Intent intent4 = new Intent(NavbarActivity.this, Notyfication.class);
+                    startActivity(intent4);
                     break;
             }
 
