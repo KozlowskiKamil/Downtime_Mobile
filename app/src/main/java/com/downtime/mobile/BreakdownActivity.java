@@ -20,7 +20,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BreakdownActivity extends AppCompatActivity {
+public class BreakdownActivity extends AppCompatActivity implements SelectListener{
 
     private RecyclerView recyclerView;
 
@@ -57,7 +57,7 @@ public class BreakdownActivity extends AppCompatActivity {
     }
 
     private void populateListView(List<Breakedown> breakedownList) {
-        BreakdownAdapter breakdownAdapter = new BreakdownAdapter(breakedownList);
+        BreakdownAdapter breakdownAdapter = new BreakdownAdapter(breakedownList, this);
         recyclerView.setAdapter(breakdownAdapter);
     }
 
@@ -65,5 +65,10 @@ public class BreakdownActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         loadfailures();
+    }
+
+    @Override
+    public void onItemClick(Breakedown breakedown) {
+        Toast.makeText(this, breakedown.getComputerName(), Toast.LENGTH_SHORT).show();
     }
 }
