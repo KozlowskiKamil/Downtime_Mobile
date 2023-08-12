@@ -14,7 +14,7 @@
         android:theme="@style/MobileDt"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".MainActivity2"
+            android:name=".ClickItem"
             android:exported="false" />
         <activity
             android:name=".NavbarActivity"

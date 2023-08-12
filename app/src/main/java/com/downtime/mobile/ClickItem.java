@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class MainActivity2 extends AppCompatActivity {
+public class ClickItem extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mai2);
+        setContentView(R.layout.click_item);
 
 
         String failureName = getIntent().getStringExtra("FailureName");
