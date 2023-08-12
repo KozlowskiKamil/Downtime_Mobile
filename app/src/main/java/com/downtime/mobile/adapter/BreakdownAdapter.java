@@ -1,35 +1,48 @@
 package com.downtime.mobile.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.downtime.mobile.R;
+import com.downtime.mobile.RecyclerViewInterface;
 import com.downtime.mobile.model.Breakedown;
 
 import java.util.List;
 
-public class BreakdownAdapter extends RecyclerView.Adapter<BreakdownHolder> {
+public class BreakdownAdapter extends RecyclerView.Adapter<BreakdownAdapter.MyViewHolder> {
 
+    private final RecyclerViewInterface recyclerViewInterface;
+
+    Context context;
     private List<Breakedown> breakedownList;
 
-    public BreakdownAdapter(List<Breakedown> breakedownList) {
+    public BreakdownAdapter(List<Breakedown> breakedownList, RecyclerViewInterface recyclerViewInterface) {
         this.breakedownList = breakedownList;
+        this.recyclerViewInterface = recyclerViewInterface;
+    }
+
+    public BreakdownAdapter(Context context, List<Breakedown> breakedownList, RecyclerViewInterface recyclerViewInterface) {
+        this.context = context;
+        this.breakedownList = breakedownList;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
     @Override
-    public BreakdownHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_failure_item, parent, false);
-        return new BreakdownHolder(view);
+        return new MyViewHolder(view, recyclerViewInterface);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BreakdownHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Breakedown breakedown = breakedownList.get(position);
         holder.name.setText(breakedown.getFailureName());
         holder.location.setText(breakedown.getComputerName());
@@ -39,5 +52,30 @@ public class BreakdownAdapter extends RecyclerView.Adapter<BreakdownHolder> {
     @Override
     public int getItemCount() {
         return breakedownList.size();
+    }
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+
+        TextView name, location, branch;
+
+        public MyViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
+            super(itemView);
+            name = itemView.findViewById(R.id.failureListItem_name);
+            location = itemView.findViewById(R.id.failureListItem_location);
+            branch = itemView.findViewById(R.id.failureListItem_branch);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (recyclerViewInterface != null) {
+                        int pos = getAdapterPosition();
+
+                        if (pos != RecyclerView.NO_POSITION) {
+                            recyclerViewInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
+        }
     }
 }
