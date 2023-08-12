@@ -15,7 +15,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".ClickItem"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".BreakdownActivity"/>
         <activity
             android:name=".NavbarActivity"
             android:exported="true">
