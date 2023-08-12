@@ -86,10 +86,10 @@ public class BreakdownActivity extends AppCompatActivity implements RecyclerView
     public void onItemClick(int position) {
         Intent intent = new Intent(BreakdownActivity.this, MainActivity2.class);
 
-        intent.putExtra("NAME", breakedownArrayList.get(position).getComputerName());
-        intent.putExtra("ABBER_BIG", breakedownArrayList.get(position).getFailureName());
-        intent.putExtra("SMALL", breakedownArrayList.get(position).getDescription());
-        intent.putExtra("DESCRIPTION", breakedownArrayList.get(position).getDescription());
+        intent.putExtra("ComputerName", breakedownArrayList.get(position).getComputerName());
+        intent.putExtra("FailureName", breakedownArrayList.get(position).getFailureName());
+        intent.putExtra("Description", breakedownArrayList.get(position).getDescription());
+//        intent.putExtra("DESCRIPTION", breakedownArrayList.get(position).getDescription());
 //        intent.putExtra("IMAGE", aminoModels.get(position).getImage());
 
         startActivity(intent);

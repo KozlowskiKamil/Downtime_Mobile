@@ -13,12 +13,20 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_mai2);
 
 
-        String name = getIntent().getStringExtra("NAME");
-        String abberBig = getIntent().getStringExtra("ABBER_BIG");
-        String abberSmall = getIntent().getStringExtra("SMALL");
-        String description = getIntent().getStringExtra("DESCRIPTION");
-        int image = getIntent().getIntExtra("IMAGE", 0);
+        String failureName = getIntent().getStringExtra("FailureName");
+        String computerName = getIntent().getStringExtra("ComputerName");
+        String description = getIntent().getStringExtra("Description");
+//        int image = getIntent().getIntExtra("IMAGE", 0);
 
-        TextView newTextView = findViewById(R.id.title);
+
+        TextView failureNameView = findViewById(R.id.failureListItem_name_click);
+        TextView computerNameView = findViewById(R.id.failureListItem_location_click);
+        TextView descriptionView = findViewById(R.id.failureListItem_description_click);
+
+        failureNameView.setText(failureName);
+        computerNameView.setText(computerName);
+        descriptionView.setText(description);
+
+
     }
 }
