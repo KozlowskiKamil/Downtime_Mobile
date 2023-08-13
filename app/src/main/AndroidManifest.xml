@@ -16,7 +16,7 @@
         <activity
             android:name=".BreakdownClose"
             android:exported="false"
-            android:label="Dodaj nową awarię"
+            android:label="Zamknij awarię"
             android:parentActivityName=".BreakdownActivity" />
         <activity
             android:name=".ClickItem"

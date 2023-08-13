@@ -55,7 +55,11 @@ public class BreakdownClose extends AppCompatActivity {
             breakdownApi.close(breakedown).enqueue(new Callback<Breakedown>() {
                 @Override
                 public void onResponse(Call<Breakedown> call, Response<Breakedown> response) {
-                    Toast.makeText(BreakdownClose.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
+                    if (response.isSuccessful()){
+                        Toast.makeText(BreakdownClose.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(BreakdownClose.this, "Zły numer BT", Toast.LENGTH_LONG).show();
+                    }
                 }
                 @Override
                 public void onFailure(Call<Breakedown> call, Throwable t) {
