@@ -2,16 +2,16 @@ package com.downtime.mobile.model;
 
 public class Breakedown {
 
-    private int id;
+    private Long id;
     private String failureName;
     private String computerName;
     private String description;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

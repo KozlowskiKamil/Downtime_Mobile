@@ -46,7 +46,7 @@ public class BreakdownForm extends AppCompatActivity {
             breakedown.setFailureName(failureName);
             breakedown.setDescription(description);
             breakedown.setComputerName(computerName);
-//            breakedown.setId(14);  todo dodać zmienna id
+//            breakedown.setId();
 
             breakdownApi.save(breakedown)
                     .enqueue(new Callback<Breakedown>() {

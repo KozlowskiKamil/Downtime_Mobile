@@ -1,5 +1,6 @@
 package com.downtime.mobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,6 +13,7 @@ import com.downtime.mobile.adapter.BreakdownAdapter;
 import com.downtime.mobile.model.Breakedown;
 import com.downtime.mobile.reotrfit.BreakdownApi;
 import com.downtime.mobile.reotrfit.RetrofitService;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +28,8 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
     String failureName;
     String computerName;
     String description;
+    Long id;
+
     private RecyclerView recyclerView;
 
     @Override
@@ -37,27 +41,30 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
         failureName = getIntent().getStringExtra("FailureName");
         computerName = getIntent().getStringExtra("ComputerName");
         description = getIntent().getStringExtra("Description");
+        id = getIntent().getLongExtra("Id", getTaskId());
+//        id = getIntent().getLongExtra("Id",  );
 //        int image = getIntent().getIntExtra("IMAGE", 0);
 
 
         TextView failureNameView = findViewById(R.id.failureListItem_name_click);
         TextView computerNameView = findViewById(R.id.failureListItem_location_click);
         TextView descriptionView = findViewById(R.id.failureListItem_description_click);
+        TextView idView = findViewById(R.id.failureListItem_id_click);
 
         failureNameView.setText(failureName);
         computerNameView.setText(computerName);
         descriptionView.setText(description);
+        idView.setText(String.valueOf(id));
 
         recyclerView = findViewById(R.id.failureList_same);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-//
-//        FloatingActionButton floatingActionButton = findViewById(R.id.failureList_fab);
-//        floatingActionButton.setOnClickListener(view -> {
-//            Intent intent = new Intent(this, BreakdownForm.class);
-//            startActivity(intent);
-//        });
+        FloatingActionButton floatingActionButton = findViewById(R.id.failureList_fab);
+        floatingActionButton.setOnClickListener(view -> {
+            Intent intent = new Intent(this, BreakdownForm.class);
+            startActivity(intent);
+        });
     }
 
 
