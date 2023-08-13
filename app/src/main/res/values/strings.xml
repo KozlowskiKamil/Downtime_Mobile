@@ -9,6 +9,7 @@
     <string name="close">Zamknięte</string>
     <string name="done">Zakończ</string>
     <string name="token">Token</string>
+    <string name="numerBT">Wprowadź BT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
