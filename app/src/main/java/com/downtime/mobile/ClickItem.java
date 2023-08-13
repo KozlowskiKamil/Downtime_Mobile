@@ -70,7 +70,7 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
     private void loadfailures() {
         RetrofitService retrofitService = new RetrofitService();
         BreakdownApi breakdownApi = retrofitService.getRetrofit().create(BreakdownApi.class);
-        breakdownApi.getOngoing()
+        breakdownApi.getAllfailures()
                 .enqueue(new Callback<List<Breakedown>>() {
                     @Override
                     public void onResponse(Call<List<Breakedown>> call, Response<List<Breakedown>> response) {
@@ -84,6 +84,12 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
                         Toast.makeText(ClickItem.this, "Nie mogę wgrać awarii", Toast.LENGTH_LONG).show();
                     }
                 });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadfailures();
     }
 
     @Override
