@@ -3,7 +3,8 @@
     <string name="form_name">Nazwa błędu</string>
     <string name="form_branch">Nazwa PC</string>
     <string name="form_location">OPIS</string>
-    <string name="button_save_failure">ZAPISZ AWARIE</string>
+    <string name="button_save_failure">DODAJ AWARIE</string>
+    <string name="button_close_failure">ZAMKNIJ AWARIE</string>
     <string name="failure">Otwarte</string>
     <string name="close">Zamknięte</string>
     <string name="done">Zakończ</string>

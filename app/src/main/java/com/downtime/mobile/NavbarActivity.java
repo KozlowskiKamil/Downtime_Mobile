@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.downtime.mobile.databinding.ActivityMain2Binding;
+import com.downtime.mobile.fragment.FailureFragment;
 
 public class NavbarActivity extends AppCompatActivity {
 

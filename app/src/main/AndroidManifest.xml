@@ -14,9 +14,15 @@
         android:theme="@style/MobileDt"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".BreakdownClose"
+            android:exported="false"
+            android:label="Dodaj nową awarię"
+            android:parentActivityName=".BreakdownActivity" />
+        <activity
             android:name=".ClickItem"
             android:exported="false"
-            android:parentActivityName=".BreakdownActivity"/>
+            android:label="Szczegóły awarii"
+            android:parentActivityName=".BreakdownActivity" />
         <activity
             android:name=".NavbarActivity"
             android:exported="true">
@@ -63,7 +69,7 @@
         <activity
             android:name=".BreakdownForm"
             android:exported="true"
-            android:label="Create new breakedown"
+            android:label="Dodaj nową awarię"
             android:parentActivityName=".BreakdownActivity" />
     </application>
 
