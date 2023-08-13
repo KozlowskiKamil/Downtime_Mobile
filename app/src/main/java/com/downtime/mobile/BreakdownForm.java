@@ -29,23 +29,24 @@ public class BreakdownForm extends AppCompatActivity {
     }
 
     private void initializeComponents() {
-        TextInputEditText inputEditTextName = findViewById(R.id.form_textFieldName);
-        TextInputEditText inputEditBranch = findViewById(R.id.form_textFieldBranch);
-        TextInputEditText inputEditLocation = findViewById(R.id.form_textFieldLocation);
+        TextInputEditText inputEditTextFailureName = findViewById(R.id.form_text_failureName);
+        TextInputEditText inputEditDescription = findViewById(R.id.form_textField_description);
+        TextInputEditText inputEditComputerName = findViewById(R.id.form_textField_computerName);
         MaterialButton buttonSave = findViewById(R.id.form_buttonSave);
 
         RetrofitService retrofitService = new RetrofitService();
         BreakdownApi breakdownApi = retrofitService.getRetrofit().create(BreakdownApi.class);
 
         buttonSave.setOnClickListener(view -> {
-            String name = String.valueOf(inputEditTextName.getText());
-            String branch = String.valueOf(inputEditBranch.getText());
-            String location = String.valueOf(inputEditLocation.getText());
+            String failureName = String.valueOf(inputEditTextFailureName.getText());
+            String description = String.valueOf(inputEditDescription.getText());
+            String computerName = String.valueOf(inputEditComputerName.getText());
 
             Breakedown breakedown = new Breakedown();
-            breakedown.setFailureName(name);
-            breakedown.setDescription(branch);
-            breakedown.setComputerName(location);
+            breakedown.setFailureName(failureName);
+            breakedown.setDescription(description);
+            breakedown.setComputerName(computerName);
+//            breakedown.setId(14);  todo dodać zmienna id
 
             breakdownApi.save(breakedown)
                     .enqueue(new Callback<Breakedown>() {

@@ -12,25 +12,25 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <com.google.android.material.textfield.TextInputEditText
-      android:id="@+id/form_textFieldName"
+      android:id="@+id/form_text_failureName"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginBottom="5dp"
       android:hint="@string/form_name" />
 
     <com.google.android.material.textfield.TextInputEditText
-      android:id="@+id/form_textFieldBranch"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="5dp"
-      android:hint="@string/form_branch" />
-
-    <com.google.android.material.textfield.TextInputEditText
-      android:id="@+id/form_textFieldLocation"
+      android:id="@+id/form_textField_description"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginBottom="5dp"
       android:hint="@string/form_location" />
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/form_textField_computerName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:hint="@string/form_branch" />
   </LinearLayout>
 
   <com.google.android.material.button.MaterialButton
