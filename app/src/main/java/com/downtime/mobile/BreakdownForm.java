@@ -29,37 +29,39 @@ public class BreakdownForm extends AppCompatActivity {
     }
 
     private void initializeComponents() {
-        TextInputEditText inputEditTextName = findViewById(R.id.form_textFieldName);
-        TextInputEditText inputEditBranch = findViewById(R.id.form_textFieldBranch);
-        TextInputEditText inputEditLocation = findViewById(R.id.form_textFieldLocation);
+        TextInputEditText inputEditTextFailureName = findViewById(R.id.form_text_failureName);
+        TextInputEditText inputEditDescription = findViewById(R.id.form_textField_description);
+        TextInputEditText inputEditComputerName = findViewById(R.id.form_textField_computerName);
         MaterialButton buttonSave = findViewById(R.id.form_buttonSave);
 
         RetrofitService retrofitService = new RetrofitService();
         BreakdownApi breakdownApi = retrofitService.getRetrofit().create(BreakdownApi.class);
 
         buttonSave.setOnClickListener(view -> {
-            String name = String.valueOf(inputEditTextName.getText());
-            String branch = String.valueOf(inputEditBranch.getText());
-            String location = String.valueOf(inputEditLocation.getText());
+            String failureName = String.valueOf(inputEditTextFailureName.getText());
+            String description = String.valueOf(inputEditDescription.getText());
+            String computerName = String.valueOf(inputEditComputerName.getText());
 
             Breakedown breakedown = new Breakedown();
-            breakedown.setFailureName(name);
-            breakedown.setDescription(branch);
-            breakedown.setComputerName(location);
+            breakedown.setId(ClickItem.id);
+            breakedown.setFailureName(failureName);
+            breakedown.setDescription(description);
+            breakedown.setComputerName(computerName);
 
-            breakdownApi.save(breakedown)
-                    .enqueue(new Callback<Breakedown>() {
-                        @Override
-                        public void onResponse(Call<Breakedown> call, Response<Breakedown> response) {
-                            Toast.makeText(BreakdownForm.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
-                        }
+//            breakedown.setId();
 
-                        @Override
-                        public void onFailure(Call<Breakedown> call, Throwable t) {
-                            Toast.makeText(BreakdownForm.this, "Nie zapisano awarii!", Toast.LENGTH_LONG).show();
-                            Logger.getLogger(BreakdownForm.class.getName()).log(Level.SEVERE, "Error occurred", t);
-                        }
-                    });
+            breakdownApi.save(breakedown).enqueue(new Callback<Breakedown>() {
+                @Override
+                public void onResponse(Call<Breakedown> call, Response<Breakedown> response) {
+                    Toast.makeText(BreakdownForm.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
+                }
+
+                @Override
+                public void onFailure(Call<Breakedown> call, Throwable t) {
+                    Toast.makeText(BreakdownForm.this, "Nie zapisano awarii!", Toast.LENGTH_LONG).show();
+                    Logger.getLogger(BreakdownForm.class.getName()).log(Level.SEVERE, "Error occurred", t);
+                }
+            });
         });
     }
 }

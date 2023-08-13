@@ -16,7 +16,7 @@ public interface BreakdownApi {
     @GET("/findall")
     Call<List<Breakedown>> getAllfailures();
 
-    @POST("/breakdown")
+    @PATCH("/breakdown")
     Call<Breakedown> save(@Body Breakedown breakedown);
 
     @GET("/ended")
