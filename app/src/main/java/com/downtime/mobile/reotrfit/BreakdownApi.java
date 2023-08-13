@@ -25,10 +25,9 @@ public interface BreakdownApi {
     @GET("/ongoing")
     Call<List<Breakedown>> getOngoing();
 
-    @POST("/samefailure/{computerName}/{failureName}")
-    Call<Breakedown> findAllByComputerNameAndFailureName(@Path("computerName") String computerName,
+    @GET("/samefailure/{computerName}/{failureName}")
+    Call<List<Breakedown>> findAllByComputerNameAndFailureName(@Path("computerName") String computerName,
                                                          @Path("failureName")String failureName);
-
 
 
 }
