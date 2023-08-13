@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FailureFragment">
+    tools:context=".fragment.FailureFragment">
 
     <!-- Replace the current TextView with RecyclerView and FloatingActionButton -->
     <androidx.recyclerview.widget.RecyclerView

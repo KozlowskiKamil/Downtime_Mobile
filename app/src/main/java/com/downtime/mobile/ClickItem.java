@@ -63,7 +63,7 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
 
         FloatingActionButton floatingActionButton = findViewById(R.id.failureList_click);
         floatingActionButton.setOnClickListener(view -> {
-            Intent intent = new Intent(this, BreakdownForm.class);
+            Intent intent = new Intent(this, BreakdownClose.class);
             startActivity(intent);
         });
     }
