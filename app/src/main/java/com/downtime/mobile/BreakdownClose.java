@@ -29,9 +29,9 @@ public class BreakdownClose extends AppCompatActivity {
     }
 
     private void initializeComponents() {
-        TextInputEditText inputEditTextFailureName = findViewById(R.id.form_text_failureName);
+        TextInputEditText inputEditTextNumberBt = findViewById(R.id.form_text_failureName);
         TextInputEditText inputEditDescription = findViewById(R.id.form_textField_description);
-        TextInputEditText inputEditComputerName = findViewById(R.id.form_textField_computerName);
+//        TextInputEditText inputEditComputerName = findViewById(R.id.form_textField_computerName);
 
         MaterialButton buttonSave = findViewById(R.id.form_buttonSave);
 
@@ -39,15 +39,16 @@ public class BreakdownClose extends AppCompatActivity {
         BreakdownApi breakdownApi = retrofitService.getRetrofit().create(BreakdownApi.class);
 
         buttonSave.setOnClickListener(view -> {
-            String failureName = String.valueOf(inputEditTextFailureName.getText());
+            String numberBt = String.valueOf(inputEditTextNumberBt.getText());
             String description = String.valueOf(inputEditDescription.getText());
-            String computerName = String.valueOf(inputEditComputerName.getText());
+//            String computerName = String.valueOf(inputEditComputerName.getText());
 
             Breakedown breakedown = new Breakedown();
             breakedown.setId(ClickItem.id);
-            breakedown.setFailureName(failureName);
+            // WARNING: I'm using the failure name here to send a number BT, I know it's bad practice. It's just easier- Kamil ;)
+            breakedown.setFailureName(numberBt);
             breakedown.setDescription(description);
-            breakedown.setComputerName(computerName);
+//            breakedown.setComputerName(computerName);
 
 
             breakdownApi.save(breakedown).enqueue(new Callback<Breakedown>() {

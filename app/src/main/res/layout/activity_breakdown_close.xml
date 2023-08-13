@@ -14,23 +14,19 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/form_text_failureName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginBottom="5dp"
-            android:hint="@string/form_name" />
+            android:hint="@string/numerBT"
+            android:inputType="number"/>
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/form_textField_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="329dp"
             android:layout_marginBottom="5dp"
-            android:hint="@string/form_location" />
+            android:hint="@string/form_location"
+            android:inputType="textMultiLine" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/form_textField_computerName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/form_branch" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
