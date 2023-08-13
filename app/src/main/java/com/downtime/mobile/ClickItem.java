@@ -1,19 +1,17 @@
 package com.downtime.mobile;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.downtime.mobile.adapter.BreakdownAdapter;
 import com.downtime.mobile.model.Breakedown;
 import com.downtime.mobile.reotrfit.BreakdownApi;
 import com.downtime.mobile.reotrfit.RetrofitService;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,14 +22,11 @@ import retrofit2.Response;
 
 public class ClickItem extends AppCompatActivity implements RecyclerViewInterface {
 
-    private RecyclerView recyclerView;
-
     ArrayList<Breakedown> breakedownArrayList = new ArrayList<>();
-
     String failureName;
     String computerName;
     String description;
-
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +61,10 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
     }
 
 
-
-    private void loadfailures() {
+    private void loadfailures(String computerNamee, String failureNamee) {
         RetrofitService retrofitService = new RetrofitService();
         BreakdownApi breakdownApi = retrofitService.getRetrofit().create(BreakdownApi.class);
-        breakdownApi.getAllfailures()
+        breakdownApi.findAllByComputerNameAndFailureName(computerNamee, failureNamee)
                 .enqueue(new Callback<List<Breakedown>>() {
                     @Override
                     public void onResponse(Call<List<Breakedown>> call, Response<List<Breakedown>> response) {
@@ -89,7 +83,7 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
     @Override
     protected void onResume() {
         super.onResume();
-        loadfailures();
+        loadfailures(computerName, failureName);
     }
 
     @Override
