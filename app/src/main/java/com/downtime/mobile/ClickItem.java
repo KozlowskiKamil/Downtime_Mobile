@@ -28,7 +28,8 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
     String failureName;
     String computerName;
     String description;
-    Long id;
+    public static Long id;
+
 
     private RecyclerView recyclerView;
 
@@ -60,7 +61,7 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        FloatingActionButton floatingActionButton = findViewById(R.id.failureList_fab);
+        FloatingActionButton floatingActionButton = findViewById(R.id.failureList_click);
         floatingActionButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, BreakdownForm.class);
             startActivity(intent);

@@ -43,24 +43,25 @@ public class BreakdownForm extends AppCompatActivity {
             String computerName = String.valueOf(inputEditComputerName.getText());
 
             Breakedown breakedown = new Breakedown();
+            breakedown.setId(ClickItem.id);
             breakedown.setFailureName(failureName);
             breakedown.setDescription(description);
             breakedown.setComputerName(computerName);
+
 //            breakedown.setId();
 
-            breakdownApi.save(breakedown)
-                    .enqueue(new Callback<Breakedown>() {
-                        @Override
-                        public void onResponse(Call<Breakedown> call, Response<Breakedown> response) {
-                            Toast.makeText(BreakdownForm.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
-                        }
+            breakdownApi.save(breakedown).enqueue(new Callback<Breakedown>() {
+                @Override
+                public void onResponse(Call<Breakedown> call, Response<Breakedown> response) {
+                    Toast.makeText(BreakdownForm.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
+                }
 
-                        @Override
-                        public void onFailure(Call<Breakedown> call, Throwable t) {
-                            Toast.makeText(BreakdownForm.this, "Nie zapisano awarii!", Toast.LENGTH_LONG).show();
-                            Logger.getLogger(BreakdownForm.class.getName()).log(Level.SEVERE, "Error occurred", t);
-                        }
-                    });
+                @Override
+                public void onFailure(Call<Breakedown> call, Throwable t) {
+                    Toast.makeText(BreakdownForm.this, "Nie zapisano awarii!", Toast.LENGTH_LONG).show();
+                    Logger.getLogger(BreakdownForm.class.getName()).log(Level.SEVERE, "Error occurred", t);
+                }
+            });
         });
     }
 }
