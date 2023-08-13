@@ -19,6 +19,9 @@ public interface BreakdownApi {
     @PATCH("/breakdown")
     Call<Breakedown> save(@Body Breakedown breakedown);
 
+    @PATCH("/breakdownclose")
+    Call<Breakedown> close(@Body Breakedown breakedown);
+
     @GET("/ended")
     Call<List<Breakedown>> getEnded();
 

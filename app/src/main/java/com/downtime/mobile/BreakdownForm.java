@@ -31,7 +31,7 @@ public class BreakdownForm extends AppCompatActivity {
     private void initializeComponents() {
         TextInputEditText inputEditTextFailureName = findViewById(R.id.form_text_failureName);
         TextInputEditText inputEditDescription = findViewById(R.id.form_textField_description);
-        TextInputEditText inputEditComputerName = findViewById(R.id.form_textField_computerName);
+        TextInputEditText inputEditComputerName = findViewById(R.id.form_textField_waitingTime);
         MaterialButton buttonSave = findViewById(R.id.form_buttonSave);
 
         RetrofitService retrofitService = new RetrofitService();

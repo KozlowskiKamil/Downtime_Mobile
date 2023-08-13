@@ -1,9 +1,9 @@
 package com.downtime.mobile;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.downtime.mobile.model.Breakedown;
 import com.downtime.mobile.reotrfit.BreakdownApi;
@@ -31,7 +31,7 @@ public class BreakdownClose extends AppCompatActivity {
     private void initializeComponents() {
         TextInputEditText inputEditTextNumberBt = findViewById(R.id.form_text_failureName);
         TextInputEditText inputEditDescription = findViewById(R.id.form_textField_description);
-//        TextInputEditText inputEditComputerName = findViewById(R.id.form_textField_computerName);
+        TextInputEditText inputEditwaitingTime = findViewById(R.id.form_textField_waitingTime);
 
         MaterialButton buttonSave = findViewById(R.id.form_buttonSave);
 
@@ -41,22 +41,22 @@ public class BreakdownClose extends AppCompatActivity {
         buttonSave.setOnClickListener(view -> {
             String numberBt = String.valueOf(inputEditTextNumberBt.getText());
             String description = String.valueOf(inputEditDescription.getText());
-//            String computerName = String.valueOf(inputEditComputerName.getText());
+            Long waitingTimeForm = Long.valueOf(String.valueOf(inputEditwaitingTime.getText()));
+            Long waitingTime = waitingTimeForm * 60; // minute to second
 
             Breakedown breakedown = new Breakedown();
             breakedown.setId(ClickItem.id);
             // WARNING: I'm using the failure name here to send a number BT, I know it's bad practice. It's just easier- Kamil ;)
             breakedown.setFailureName(numberBt);
             breakedown.setDescription(description);
-//            breakedown.setComputerName(computerName);
+            breakedown.setWaitingTime(waitingTime);
 
 
-            breakdownApi.save(breakedown).enqueue(new Callback<Breakedown>() {
+            breakdownApi.close(breakedown).enqueue(new Callback<Breakedown>() {
                 @Override
                 public void onResponse(Call<Breakedown> call, Response<Breakedown> response) {
                     Toast.makeText(BreakdownClose.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
                 }
-
                 @Override
                 public void onFailure(Call<Breakedown> call, Throwable t) {
                     Toast.makeText(BreakdownClose.this, "Nie zapisano awarii!", Toast.LENGTH_LONG).show();
