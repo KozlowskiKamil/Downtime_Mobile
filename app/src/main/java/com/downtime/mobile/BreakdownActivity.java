@@ -21,11 +21,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BreakdownActivity extends AppCompatActivity implements RecyclerViewInterface{
-
-    private RecyclerView recyclerView;
+public class BreakdownActivity extends AppCompatActivity implements RecyclerViewInterface {
 
     ArrayList<Breakedown> breakedownArrayList = new ArrayList<>();
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,15 +60,6 @@ public class BreakdownActivity extends AppCompatActivity implements RecyclerView
                 });
     }
 
-//    private void setUpBreakdownModel() {
-//        String[] failureName = getResources().getStringArray(R.array.amino_acids_full);
-//        String[] computerName = getResources().getStringArray(R.array.amino_acids_one_letter);
-//        String[] description = getResources().getStringArray(R.array.amino_acids_three_letter);
-//
-//        for (int i = 0; i < failureName.length; i++) {
-//            breakedownArrayList.add(new Breakedown());
-//        }
-//    }
 
     private void populateListView(List<Breakedown> breakedownList) {
         BreakdownAdapter breakdownAdapter = new BreakdownAdapter(breakedownList, this);
