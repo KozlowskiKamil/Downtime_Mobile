@@ -51,7 +51,7 @@ public class BreakdownClose extends AppCompatActivity {
 //            breakedown.setComputerName(computerName);
 
 
-            breakdownApi.save(breakedown).enqueue(new Callback<Breakedown>() {
+            breakdownApi.close(breakedown).enqueue(new Callback<Breakedown>() {
                 @Override
                 public void onResponse(Call<Breakedown> call, Response<Breakedown> response) {
                     Toast.makeText(BreakdownClose.this, "Zapisano awarię!", Toast.LENGTH_LONG).show();
