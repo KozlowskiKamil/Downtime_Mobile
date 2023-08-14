@@ -44,9 +44,9 @@ public class BreakdownAdapter extends RecyclerView.Adapter<BreakdownAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Breakedown breakedown = breakedownList.get(position);
-        holder.name.setText(breakedown.getFailureName());
-        holder.location.setText(breakedown.getComputerName());
-        holder.branch.setText(breakedown.getDescription());
+        holder.failureName.setText(breakedown.getFailureName());
+        holder.computerName.setText(breakedown.getComputerName());
+        holder.description.setText(breakedown.getDescription());
     }
 
     @Override
@@ -56,13 +56,13 @@ public class BreakdownAdapter extends RecyclerView.Adapter<BreakdownAdapter.MyVi
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name, location, branch;
+        TextView failureName, computerName, description;
 
         public MyViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
-            name = itemView.findViewById(R.id.failureListItem_name);
-            location = itemView.findViewById(R.id.failureListItem_location);
-            branch = itemView.findViewById(R.id.failureListItem_branch);
+            failureName = itemView.findViewById(R.id.failureListItem_name);
+            computerName = itemView.findViewById(R.id.failureListItem_location);
+            description = itemView.findViewById(R.id.failureListItem_branch);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
