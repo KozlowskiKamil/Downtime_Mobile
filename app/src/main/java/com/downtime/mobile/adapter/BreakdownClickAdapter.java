@@ -47,6 +47,8 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
         holder.failureName.setText(breakedown.getFailureName());
         holder.computerName.setText(breakedown.getComputerName());
         holder.description.setText(breakedown.getDescription());
+        String technician = breakedown.getTechnician().getName();
+        holder.technicianName.setText(technician);
     }
 
     @Override
@@ -63,6 +65,7 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
             failureName = itemView.findViewById(R.id.failureListItem_name);
             computerName = itemView.findViewById(R.id.failureListItem_location);
             description = itemView.findViewById(R.id.failureListItem_branch);
+            technicianName = itemView.findViewById(R.id.failureListItem_technicianName);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {
