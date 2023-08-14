@@ -47,8 +47,13 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Breakedown breakedown = breakedownList.get(position);
         holder.description.setText(breakedown.getDescription());
-        String technician = breakedown.getTechnician().getName();
-        holder.technicianName.setText(technician);
+        if (breakedown.getTechnician().getName() == null) {
+            holder.technicianName.setText("Nie wprowadzono");
+
+        }else {
+            String technician = breakedown.getTechnician().getName();
+            holder.technicianName.setText(technician);
+        }
         String failureStartTime = breakedown.getFailureStartTime();
         LocalDateTime now = LocalDateTime.parse(failureStartTime);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss dd-MM-yyyy");

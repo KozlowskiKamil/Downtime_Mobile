@@ -14,6 +14,10 @@
         android:theme="@style/MobileDt"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".OngoingActivity"
+            android:exported="false"
+            android:parentActivityName=".NavbarActivity"/>
+        <activity
             android:name=".BreakdownClose"
             android:exported="false"
             android:label="Zamknij awarię"
