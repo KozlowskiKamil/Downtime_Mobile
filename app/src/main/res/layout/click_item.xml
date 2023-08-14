@@ -14,14 +14,10 @@
         android:layout_margin="15dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="34dp"
         android:text="Computer Name"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/failureListItem_id_click"
-        app:layout_constraintEnd_toStartOf="@+id/failureListItem_name_click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,70 +27,45 @@
         android:layout_height="22dp"
         android:layout_margin="15dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="37dp"
         android:text="ID"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/failureListItem_description_click"
-        app:layout_constraintEnd_toStartOf="@+id/failureListItem_name_click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/failureListItem_location_click" />
 
     <TextView
         android:id="@+id/failureListItem_name_click"
-        android:layout_width="189dp"
-        android:layout_height="88dp"
+        android:layout_width="195dp"
+        android:layout_height="113dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:paddingBottom="20dp"
         android:text="Failure Name"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/failureListItem_description_click"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/failureListItem_location_click"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/failureListItem_description_click"
-        android:layout_width="385dp"
-        android:layout_height="142dp"
-        android:layout_margin="15dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="5dp"
-        android:text="Description"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/failureList_same"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/failureListItem_name_click" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="7dp"
         android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/failureList_same"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/failureListItem_description_click" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/failureList_same"
-        android:layout_width="391dp"
-        android:layout_height="340dp"
+        android:layout_width="wrap_content"
+        android:layout_height="449dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/failureList_click"
@@ -104,7 +75,6 @@
         android:src="@drawable/baseline_done_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

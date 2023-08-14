@@ -49,12 +49,12 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
 
         TextView failureNameView = findViewById(R.id.failureListItem_name_click);
         TextView computerNameView = findViewById(R.id.failureListItem_location_click);
-        TextView descriptionView = findViewById(R.id.failureListItem_description_click);
+//        TextView descriptionView = findViewById(R.id.failureListItem_description_click);
         TextView idView = findViewById(R.id.failureListItem_id_click);
 
         failureNameView.setText(failureName);
         computerNameView.setText(computerName);
-        descriptionView.setText(description);
+//        descriptionView.setText(description);
         idView.setText(String.valueOf(id));
 
         recyclerView = findViewById(R.id.failureList_same);
