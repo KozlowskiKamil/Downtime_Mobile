@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.downtime.mobile.adapter.BreakdownAdapter;
+import com.downtime.mobile.adapter.BreakdownClickAdapter;
 import com.downtime.mobile.model.Breakedown;
 import com.downtime.mobile.reotrfit.BreakdownApi;
 import com.downtime.mobile.reotrfit.RetrofitService;
@@ -100,7 +101,7 @@ public class ClickItem extends AppCompatActivity implements RecyclerViewInterfac
     }
 
     private void populateListView(List<Breakedown> breakedownList) {
-        BreakdownAdapter breakdownAdapter = new BreakdownAdapter(breakedownList, this);
+        BreakdownClickAdapter breakdownAdapter = new BreakdownClickAdapter(breakedownList, this);
         recyclerView.setAdapter(breakdownAdapter);
     }
 }
