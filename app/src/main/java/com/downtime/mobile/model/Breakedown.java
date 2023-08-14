@@ -1,5 +1,7 @@
 package com.downtime.mobile.model;
 
+import java.time.LocalDateTime;
+
 public class Breakedown {
 
     private Long id;
@@ -7,6 +9,7 @@ public class Breakedown {
     private String computerName;
     private String description;
     private Long waitingTime;
+    private String failureStartTime;
     private Technician technician;
 
     public Long getId() {
@@ -57,6 +60,14 @@ public class Breakedown {
         this.technician = technician;
     }
 
+    public String getFailureStartTime() {
+        return failureStartTime;
+    }
+
+    public void setFailureStartTime(String failureStartTime) {
+        this.failureStartTime = failureStartTime;
+    }
+
     @Override
     public String toString() {
         return "Breakedown{" +
@@ -65,6 +76,9 @@ public class Breakedown {
                 ", computerName='" + computerName + '\'' +
                 ", description='" + description + '\'' +
                 ", waitingTime=" + waitingTime +
+//                ", failureStartTime=" + failureStartTime +
+                ", technician=" + technician +
                 '}';
     }
+
 }

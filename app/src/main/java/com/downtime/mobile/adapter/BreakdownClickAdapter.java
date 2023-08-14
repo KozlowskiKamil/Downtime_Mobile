@@ -13,6 +13,8 @@ import com.downtime.mobile.R;
 import com.downtime.mobile.RecyclerViewInterface;
 import com.downtime.mobile.model.Breakedown;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAdapter.MyViewHolder> {
@@ -44,11 +46,15 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Breakedown breakedown = breakedownList.get(position);
-        holder.failureName.setText(breakedown.getFailureName());
-        holder.computerName.setText(breakedown.getComputerName());
         holder.description.setText(breakedown.getDescription());
         String technician = breakedown.getTechnician().getName();
         holder.technicianName.setText(technician);
+        String failureStartTime = breakedown.getFailureStartTime();
+        LocalDateTime now = LocalDateTime.parse(failureStartTime);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss dd-MM-yyyy");
+        failureStartTime = now.format(formatter);
+        System.out.println("failureStartTime = " + failureStartTime);
+        holder.failureStartTime.setText(failureStartTime);
     }
 
     @Override
@@ -58,16 +64,13 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView failureName, computerName, description, technicianName;
+        TextView description, technicianName, failureStartTime;
 
         public MyViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
-            failureName = itemView.findViewById(R.id.failureListItem_name);
-            computerName = itemView.findViewById(R.id.failureListItem_location);
-            description = itemView.findViewById(R.id.failureListItem_branch);
+            description = itemView.findViewById(R.id.failureListItem_description);
             technicianName = itemView.findViewById(R.id.failureListItem_technicianName);
-
-
+            failureStartTime = itemView.findViewById(R.id.failureListItem_failureStartTime);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

@@ -6,11 +6,11 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/failureListItem_location"
+        android:id="@+id/failureListItem_technicianName"
         android:layout_width="174dp"
         android:layout_height="22dp"
         android:layout_margin="15dp"
-        android:text="Location"
+        android:text="Technicain name"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -18,44 +18,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/failureListItem_name"
-        android:layout_width="189dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="15dp"
-        android:paddingBottom="20dp"
-        android:text="Failure Name"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/failureListItem_location" />
-
-    <TextView
-        android:id="@+id/failureListItem_branch"
-        android:layout_width="177dp"
-        android:layout_height="110dp"
+        android:id="@+id/failureListItem_failureStartTime"
+        android:layout_width="174dp"
+        android:layout_height="22dp"
         android:layout_margin="15dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Branch"
+        android:text="Data"
+        android:textColor="@color/black"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/failureListItem_description"
+        android:layout_width="382dp"
+        android:layout_height="103dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="16dp"
+        android:text="Description"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/failureListItem_technicianName" />
+
     <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:layout_marginTop="88dp"
+
+        android:layout_marginTop="1dp"
         android:background="#C2C2C2"
-        app:layout_constraintTop_toBottomOf="@id/failureListItem_location"
+        app:layout_constraintTop_toBottomOf="@+id/failureListItem_branch"
         tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/failureListItem_technicianName"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/failureListItem_branch"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
