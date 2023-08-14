@@ -7,6 +7,7 @@ public class Breakedown {
     private String computerName;
     private String description;
     private Long waitingTime;
+    private Technician technician;
 
     public Long getId() {
         return id;
@@ -46,6 +47,14 @@ public class Breakedown {
 
     public void setWaitingTime(Long waitingTime) {
         this.waitingTime = waitingTime;
+    }
+
+    public Technician getTechnician() {
+        return technician;
+    }
+
+    public void setTechnician(Technician technician) {
+        this.technician = technician;
     }
 
     @Override

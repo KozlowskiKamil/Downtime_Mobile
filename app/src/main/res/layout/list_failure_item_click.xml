@@ -18,7 +18,7 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
-      android:id="@+id/failureListItem_name"
+      android:id="@+id/failureListItem_technican"
       android:layout_width="189dp"
       android:layout_height="88dp"
       android:layout_marginStart="15dp"
@@ -30,13 +30,25 @@
 
   <TextView
       android:id="@+id/failureListItem_branch"
-      android:layout_width="177dp"
-      android:layout_height="110dp"
+      android:layout_width="174dp"
+      android:layout_height="59dp"
       android:layout_margin="15dp"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
       android:text="Branch"
       android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <TextView
+      android:id="@+id/failureListItem_technican2"
+      android:layout_width="126dp"
+      android:layout_height="24dp"
+
+      android:layout_marginTop="92dp"
+      android:layout_marginEnd="52dp"
+      android:text="Name"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 

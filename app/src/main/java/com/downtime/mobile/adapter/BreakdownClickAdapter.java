@@ -44,9 +44,11 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Breakedown breakedown = breakedownList.get(position);
+        String technician = breakedown.getTechnician().getName();
         holder.name.setText(breakedown.getFailureName());
         holder.location.setText(breakedown.getComputerName());
         holder.branch.setText(breakedown.getDescription());
+        holder.technicianName.setText(technician);
     }
 
     @Override
@@ -56,13 +58,15 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name, location, branch;
+        TextView name, location, branch, technicianName;
 
         public MyViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             name = itemView.findViewById(R.id.failureListItem_name);
             location = itemView.findViewById(R.id.failureListItem_location);
             branch = itemView.findViewById(R.id.failureListItem_branch);
+            technicianName = itemView.findViewById(R.id.failureListItem_technican);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
