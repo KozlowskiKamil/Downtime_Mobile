@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.downtime.mobile.R;
 import com.downtime.mobile.RecyclerViewInterface;
 import com.downtime.mobile.model.Breakedown;
+import com.downtime.mobile.model.Technician;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -47,19 +48,19 @@ public class BreakdownClickAdapter extends RecyclerView.Adapter<BreakdownClickAd
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Breakedown breakedown = breakedownList.get(position);
         holder.description.setText(breakedown.getDescription());
-        if (breakedown.getTechnician().getName() == null) {
-            holder.technicianName.setText("Nie wprowadzono");
-
-        }else {
-            String technician = breakedown.getTechnician().getName();
-            holder.technicianName.setText(technician);
-        }
         String failureStartTime = breakedown.getFailureStartTime();
         LocalDateTime now = LocalDateTime.parse(failureStartTime);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss dd-MM-yyyy");
         failureStartTime = now.format(formatter);
-        System.out.println("failureStartTime = " + failureStartTime);
         holder.failureStartTime.setText(failureStartTime);
+        Technician technician = breakedown.getTechnician();
+        if (technician == null) {
+            holder.technicianName.setText("Nie wprowadzono");
+        }else {
+            String technician2 = breakedown.getTechnician().getName();
+            holder.technicianName.setText(technician2);
+        }
+
     }
 
     @Override

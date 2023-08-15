@@ -16,6 +16,7 @@
         <activity
             android:name=".OngoingActivity"
             android:exported="false"
+            android:label="Otwarte awarie"
             android:parentActivityName=".NavbarActivity"/>
         <activity
             android:name=".BreakdownClose"
