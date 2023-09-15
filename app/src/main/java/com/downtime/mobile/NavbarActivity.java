@@ -26,11 +26,11 @@ public class NavbarActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.failure:
-                    Intent intent = new Intent(NavbarActivity.this, BreakdownActivity.class);
+                    Intent intent = new Intent(NavbarActivity.this, OngoingActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.done:
-                    Intent intent2 = new Intent(NavbarActivity.this, BreakdownForm.class);
+                    Intent intent2 = new Intent(NavbarActivity.this, BreakdownActivity.class);
                     startActivity(intent2);
                     break;
                 case R.id.close:

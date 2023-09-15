@@ -9,7 +9,7 @@ public class RetrofitService {
 
     private Retrofit retrofit;
 
-    public static final String IP_ADDRESS = "http://192.168.1.49:8080"; // TODO: 03.08.2023 Konfiguracja IP
+    public static final String IP_ADDRESS = "http://192.168.1.53:8080"; // TODO: 03.08.2023 Konfiguracja IP
 
     public RetrofitService() {
         initializeRetrofit();
