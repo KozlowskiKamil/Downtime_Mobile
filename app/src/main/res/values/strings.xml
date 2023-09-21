@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">Mobile DT</string>
-    <string name="form_name">Nazwa błędu</string>
-    <string name="form_branch">Nazwa PC</string>
-    <string name="form_location">Wprowadź opis awarii</string>
-    <string name="button_save_failure">DODAJ AWARIE</string>
-    <string name="button_close_failure">ZAMKNIJ AWARIE</string>
-    <string name="failure">Otwarte</string>
-    <string name="close">Zamknięte</string>
-    <string name="done">Zakończ</string>
+    <string name="form_name">Error name</string>
+    <string name="form_branch">PC name</string>
+    <string name="form_location">Enter a description of the failure</string>
+    <string name="button_save_failure">ADD FAILURES</string>
+    <string name="button_close_failure">CLOSE FAILURES</string>
+    <string name="failure">Open</string>
+    <string name="close">Closed</string>
+    <string name="done">Finish</string>
     <string name="token">Token</string>
-    <string name="numerBT">Wprowadź BT</string>
-    <string name="waitingTime">Czas oczekiwania w minutach</string>
+    <string name="numerBT">Enter BT</string>
+    <string name="waitingTime">Waiting time in minutes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

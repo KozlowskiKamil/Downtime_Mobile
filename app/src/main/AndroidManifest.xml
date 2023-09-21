@@ -16,17 +16,17 @@
         <activity
             android:name=".OngoingActivity"
             android:exported="false"
-            android:label="Otwarte awarie"
+            android:label="Open failures"
             android:parentActivityName=".NavbarActivity"/>
         <activity
             android:name=".BreakdownClose"
             android:exported="false"
-            android:label="Zamknij awarię"
+            android:label="Close failure"
             android:parentActivityName=".BreakdownActivity" />
         <activity
             android:name=".ClickItem"
             android:exported="false"
-            android:label="Szczegóły awarii"
+            android:label="Details of the failure"
             android:parentActivityName=".BreakdownActivity" />
         <activity
             android:name=".NavbarActivity"
@@ -63,7 +63,7 @@
         <activity
             android:name=".BreakdownActivity"
             android:exported="true"
-            android:label="Lista awarii"
+            android:label="Failure list"
             android:parentActivityName=".NavbarActivity">
 
             <!-- <intent-filter> -->
@@ -74,7 +74,7 @@
         <activity
             android:name=".BreakdownForm"
             android:exported="true"
-            android:label="Dodaj nową awarię"
+            android:label="Add a new failure"
             android:parentActivityName=".BreakdownActivity" />
     </application>
 
