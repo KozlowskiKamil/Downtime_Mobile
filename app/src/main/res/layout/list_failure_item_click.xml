@@ -48,7 +48,7 @@
 
         android:layout_marginTop="1dp"
         android:background="#C2C2C2"
-        app:layout_constraintTop_toBottomOf="@+id/failureListItem_branch"
+        app:layout_constraintTop_toBottomOf="@+id/failureListItem_technicianName"
         tools:layout_editor_absoluteX="0dp" />
 
     <androidx.constraintlayout.widget.Guideline
