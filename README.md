@@ -31,7 +31,7 @@ To enable push notifications, you need to configure Firebase in the application.
 1. Clone the repository to your local environment.
 
 ```
-git clone https://github.com/your-repo-name.git
+git clone git@github.com:KozlowskiKamil/Downtime_Mobile.git
 ```
 
 2. Open the project in Android Studio.
