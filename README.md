@@ -48,4 +48,3 @@ If you have any questions or need assistance, please contact me:
 - Website: [Portfolio](https://kozlowskikamil.github.io/)
 
 Thank you for using my application!
-```
